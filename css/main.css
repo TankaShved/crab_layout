@@ -17,11 +17,11 @@
 
 body input:focus:required:invalid,
 body textarea:focus:required:invalid {
-	
+
 }
 body input:required:valid,
 body textarea:required:valid {
-	
+
 }
 body {
 	font-family: "RobotoSlab-Regular", sans-serif;
@@ -120,7 +120,7 @@ header {
     font-size: 11px;
     text-transform: none;
     background-repeat: no-repeat;
-    background-position: 5px 5px; 
+    background-position: 5px 5px;
 }
 .col-md-9 .top_mnu .call .label a{
 	padding: 0px 0px;
@@ -234,7 +234,7 @@ header .col-md-9 .butt_1 .button_t{
 	min-height: 650px;
 	position: relative;
 }
-.greenfon{	
+.greenfon{
 	background-color: #1bc86f;
 	height: 650px;
 }
@@ -316,12 +316,25 @@ header .col-md-9 .butt_1 .button_t{
 .reviews .col-md-4 {
     font-family: "Roboto-Italic";
 	background-color: #faf9f9;
-    height: 180px;
     width: 370px;
     margin: 10px;
+
+    // чтобы контент, который может быть после блока отзывов,
+    // не прилип к аватарке
+    margin-bottom: 60px;
+
+    // чтобы аватарка позиционировалась относительно своего контейнера
+    position: relative;
 }
 .reviews .col-md-4 img {
-	margin: -50px 0 0 240px;
+    // вынимаем из нормального потока:
+    // теперь высота контейнера расчитывается так,
+    // будто аватарки вовсе нет
+	position: absolute;
+
+    // прибиваем аватарку направо как нарисовано в макете
+    right: 20px;
+    bottom: -50px;
 }
 
 
@@ -332,14 +345,14 @@ header .col-md-9 .butt_1 .button_t{
 	/*min-height: 900px;*/
 	position: relative;
 	padding: 80px 0 0 ;
-}	
+}
 .maps_img{
     background-image: url(../img/maps.jpg);
 	background-repeat: repeat-x;
     background-position: top center;
     min-height: 665px;
     position: relative;
-}	
+}
 .footer_img{
     background-image: url(../img/footer.jpg);
 	background-repeat: repeat-x;
